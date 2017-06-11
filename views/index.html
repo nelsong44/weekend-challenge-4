@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Weekend Challenge 4</title>
+  </head>
+  <!-- connecting module and controller to html file for two-way binding-->
+  <body ng-app="galleryApp">
+    <!-- using 'controller as' syntax -->
+    <h1>The Gallery of My Life!</h1>
+    <div ng-controller="GalleryController as gc">
+
+        <div ng-repeat="image in gc.imgArray" class="galleryDiv">
+          <img ng-src="{{image.src}}"/>
+        </div>
+
+    </div>
+    <!-- end controller div -->
+  </body>
+</html>

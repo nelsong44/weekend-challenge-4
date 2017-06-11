@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+
+.galleryDiv{
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+
+img {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: 200px;
+}
+  
