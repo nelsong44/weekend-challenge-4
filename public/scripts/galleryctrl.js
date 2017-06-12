@@ -6,8 +6,7 @@ var galleryApp = angular.module('galleryApp', []);
 // adding a controller to the app
 galleryApp.controller('GalleryController', function() {
   console.log('NG linked'); //make sure angular is linked properly // NG will log in console once linked in HTMl
-  var vm = this; // creating two-way bind - connecting js and html
-
+  var vm = this; // creating two-way bind - connecting js and html // equivalent to $scope
     vm.imgArray = [
       { src: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19029626_10109936321254490_2928702935349440072_n.jpg?oh=9e48bef3d202e9ed22d28dbc8e3c21a1&oe=59AAB3EF', desc: 'premie photo' },
       { src: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19030279_10109936321019960_7300211073190963307_n.jpg?oh=0cae619ae85e56563470444ebd962bc5&oe=59DC934B', desc: 'the turtle' },
@@ -16,9 +15,37 @@ galleryApp.controller('GalleryController', function() {
       { src: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/19060069_10109936321229540_5137626086665318321_n.jpg?oh=65a8b6204df794f1504b983bc56e3981&oe=59E3EADA', desc: 'top surgery' },
       { src: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/18952870_10109936320995010_8894780250266909081_n.jpg?oh=e94f1e16c84232c118c16847dfee76c7&oe=59A4785B', desc: 'caricature' }
     ]; // end array
-
-
-
-
   // }; // end loadGallery
+
+  vm.flip = false;
+  vm.toggle = function() {
+    vm.flip = !vm.flip;
+  }; //end toggle
+
 }); // end controller
+
+
+//two divs on top of each other, when one is clicked show the other and vice vendors
+
+
+// <button ng-click="toggle()">Hide user</button>
+//
+// <p ng-hide="myVar">
+// First Name: <input type=text ng-model="firstName"><br>
+// Last Name: <input type=text ng-model="lastName"><br><br>
+// Full Name: {{firstName + " " + lastName}}
+// </p>
+//
+// </div>
+//
+// <script>
+// var app = angular.module('myApp', []);
+// app.controller('personCtrl', function($scope) {
+//     $scope.firstName = "John",
+//     $scope.lastName = "Doe"
+//     $scope.myVar = false;
+//     $scope.toggle = function() {
+//         $scope.myVar = !$scope.myVar;
+//     };
+// });
+// </script>

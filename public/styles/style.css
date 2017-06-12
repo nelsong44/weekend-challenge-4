@@ -2,17 +2,9 @@ h1 {
   text-align: center;
 }
 
-.galleryDiv{
+.imgDiv {
   display: inline-block;
-  height: 300px;
-  width: 300px;
-  overflow: hidden;
-}
-
-img {
-  position: relative;
-  display: inline-block;
-  height: auto;
-  width: 200px;
-}
-  
+  width: 310px;
+  height: 310px;
+  border-radius: 20px;
+};
